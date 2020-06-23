@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     if (string) {
         message.channel.send('Your suggestion has been noted and sent!')
 
-        let Schannel = bot.channels.cache.get(ch => ch.name === "suggestions"); 
+        let Schannel = bot.channels.cache.find(ch => ch.name === "suggestions"); 
 
         if (!Schannel) return message.channel.send('There is no suggestion channel!'); 
 
