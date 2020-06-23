@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
 
         suggestTag += 1
         Schannel.send(embed)
-        return suggestTag 
+        console.log(suggestTag)
     }
 }
 
