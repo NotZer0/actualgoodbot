@@ -15,6 +15,8 @@ module.exports.run = async (bot, message, args) => {
         .setAuthor(message.author.tag, message.author.avatarURL())
         .setTitle(`Suggestion #${suggestTag}`)
         .setDescription(string)
+
+        suggestTag += 1 
         Schannel.send(embed)
         
     }
