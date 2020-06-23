@@ -3,7 +3,6 @@ const prefix = require(`../config.json`);
 
 module.exports.run = async (bot, message, args) => {
     let string = args.join(" ");
-    let suggestTag = 0
     if (string) {
         message.channel.send('Your suggestion has been noted and sent!')
 
@@ -13,12 +12,13 @@ module.exports.run = async (bot, message, args) => {
 
         let embed = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
-        .setTitle(`Suggestion #${suggestTag}`)
+        .setTitle(`Suggestion Log`)
         .setDescription(string)
-
-        suggestTag += 1
-        Schannel.send(embed)
-        console.log(suggestTag)
+        .setColor('#7289da')
+        Schannel.send(embed).then(m => {
+            m.react('⬆️')
+            m.react('⬇️')
+        })
     }
 }
 
