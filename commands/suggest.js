@@ -12,6 +12,8 @@ module.exports.run = async (bot, message, args) => {
 
         let embed = new Discord.MessageEmbed()
         .setAuthor(message.author.name, message.author.avatarURL)
+
+        Schannel.send(embed)
         
     }
 }
