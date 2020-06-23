@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
         if (!Schannel) return message.channel.send('There is no suggestion channel!'); 
 
         let embed = new Discord.MessageEmbed()
-        .setAuthor(message.author.name, message.author.avatarURL)
+        .setAuthor(message.author.tag, message.author.avatarURL())
 
         Schannel.send(embed)
         
