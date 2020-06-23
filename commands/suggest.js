@@ -17,9 +17,8 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(string)
 
         suggestTag += 1
-        return suggestTag 
         Schannel.send(embed)
-        
+        return suggestTag 
     }
 }
 
