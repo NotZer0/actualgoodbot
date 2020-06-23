@@ -3,6 +3,7 @@ const prefix = require(`../config.json`);
 
 module.exports.run = async (bot, message, args) => {
     let string = args.join(" ");
+    let suggestTag = 0
     if (string) {
         message.channel.send('Your suggestion has been noted and sent!')
 
@@ -12,7 +13,8 @@ module.exports.run = async (bot, message, args) => {
 
         let embed = new Discord.MessageEmbed()
         .setAuthor(message.author.tag, message.author.avatarURL())
-
+        .setTitle(`Suggestion #${suggestTag}`)
+        .setDescription(string)
         Schannel.send(embed)
         
     }
