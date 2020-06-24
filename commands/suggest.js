@@ -4,6 +4,7 @@ const prefix = require(`../config.json`);
 module.exports.run = async (bot, message, args) => {
     let string = args.join(" ");
     if (string) {
+        message.delete()
         message.channel.send('Your suggestion has been noted and sent!')
 
         let Schannel = bot.channels.cache.find(ch => ch.name === "suggestions"); 
