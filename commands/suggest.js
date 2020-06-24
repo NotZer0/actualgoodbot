@@ -26,6 +26,6 @@ module.exports.run = async (bot, message, args) => {
 module.exports.config = {
     name: "suggest",
     description: "Suggest something",
-    usage: `${prefix}suggest`,
+    usage: `${prefix}suggest [suggestion]`,
     aliases: [""]
 }

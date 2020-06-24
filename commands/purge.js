@@ -4,7 +4,7 @@ const prefix = require(`../config.json`);
 module.exports.config = {
     name: "purge",
     description: "Purges messages",
-    usage: `${prefix}purge`,
+    usage: `${prefix}purge [amount]`,
     aliases: ["p", "clear", "pur"]
 }
 
